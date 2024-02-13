@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 011</title>
+</head>
+<body>
+    <h1>Teste de nacionalidade</h1>
+
+    Da onde você vem? <input type="text" name="country" id="p"> 
+
+    <input type="button" value="Saiba mais!" onclick="validar()">
+    <div id="resposta"> </div>
+
+        <script>
+            function validar(){
+                var pais = window.document.getElementById('p')
+                var res = window.document.getElementById('resposta')
+
+                res.innerHTML = `<p>Olá, você vem de: <strong>${pais.value}!</strong></p>`
+                if(pais.value == 'Brasil'){
+                    res.innerHTML += `<p>Logo, você é <strong>brasileiro!</strong> </p>`
+                } else {
+                    res.innerHTML += `<p>Logo, você é <strong>estrangeiro!</strong></p>`
+                }
+            }
+        </script>
+</body>
+</html>
